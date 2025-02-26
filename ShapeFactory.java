@@ -16,7 +16,7 @@ public class ShapeFactory {
     private static int squareLimit = 2;
 
     public static Shape getShape(int type) {
-        if (shapeCountAll >= countAllLimit) {
+        if (shapeCountAll > countAllLimit) {
             return null;
         }
 
