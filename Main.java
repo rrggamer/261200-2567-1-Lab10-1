@@ -9,12 +9,16 @@ public class Main {
         Shape shape5 = ShapeFactory.getShape(ShapeFactory.TYPE_RECTANGLE);
 
         Shape shape6 = ShapeFactory.getShape(ShapeFactory.TYPE_SQUARE);
+        Shape shape7 = ShapeFactory.getShape(ShapeFactory.TYPE_SQUARE);
+
 
         shape1.draw();
         shape2.draw();
 //        shape3.draw();
+        shape4.draw();
         shape5.draw();
         shape6.draw();
+//        shape7.draw();
 
     }
 }

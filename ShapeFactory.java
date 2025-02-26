@@ -15,37 +15,36 @@ public class ShapeFactory {
     private static int countSquare = 0;
     private static int squareLimit = 2;
 
-    public static Shape getShape(int type){
-        switch (type){
+    public static Shape getShape(int type) {
+        if (shapeCountAll >= countAllLimit) {
+            return null;
+        }
 
+        switch (type) {
             case TYPE_CIRCLE:
-                if(countCircle < circleLimit && shapeCountAll < countAllLimit){
+                if (countCircle < circleLimit) {
                     countCircle++;
                     shapeCountAll++;
                     return new Circle();
-                }else{
-                    return null;
                 }
+                break;
 
             case TYPE_RECTANGLE:
-                if(countRectangle < rectangleLimit && shapeCountAll < countAllLimit){
+                if (countRectangle < rectangleLimit) {
                     countRectangle++;
                     shapeCountAll++;
                     return new Rectangle();
-                }else{
-                    return null;
                 }
+                break;
 
             case TYPE_SQUARE:
-                if(countSquare < squareLimit && shapeCountAll < countAllLimit){
+                if (countSquare < squareLimit) {
                     countSquare++;
                     shapeCountAll++;
                     return new Square();
-                }else{
-                    return null;
                 }
-            default:
-                return null;
+                break;
         }
+        return null;
     }
 }
